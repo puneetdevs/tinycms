@@ -18,12 +18,6 @@ class PagesController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-	 
 	/* Function to show list of pages */
 	
     public function index(Request $request)
@@ -35,13 +29,7 @@ class PagesController extends Controller
     }
 	public function add()
     {
-		//$pages = Page::find('all');
-		//$pages = Page::orderBy('id','DESC')->paginate(5);
-		//$pages = Page::orderBy('id')->get();
 		$pages = Page::all();
-		//echo '<pre>'; print_r($pages); die('here');
-        //return view('add');
-		
 		return View('add', compact('pages'));
     }
 	
@@ -50,9 +38,7 @@ class PagesController extends Controller
 	public function store(Request $request)
     {
 		$input = $request->all();
-		//echo '<pre>'; print_r($input); die;
 		Page::create($input);
-        //return view('list');
 		
 		return redirect()->back();
     }

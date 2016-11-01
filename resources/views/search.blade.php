@@ -328,7 +328,7 @@
 								<div class="" style="padding: 10px 0px 10px 10px;">
 								<form action="#a" class="search nav-form">
 									<div class="input-group input-search">
-										<input type="text" class="form-control" name="q" id="q" placeholder="Search..." style="float: right; width: 120px;">
+										<input type="text" class="form-control" value ="{{ Request::get('q') }}" name="q" id="q" placeholder="Search..." style="float: right; width: 120px;">
 										<span class="input-group-btn">
 											<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 										</span>

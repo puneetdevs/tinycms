@@ -359,7 +359,6 @@
 										<tbody>
 											@foreach ($pages as $page)
 											<tr>
-												
 												<td>{{ $page->title}}</td>
 												<td>{{ $page->slug}}</td>
 												<td>{!! $page->short_desc!!}</td> 
@@ -369,7 +368,6 @@
 													<a href="/edit/{{ $page->id }}"><i class="fa fa-pencil"></i></a>
 													<a href="/delete_page/{{ $page->id }}" class="delete-row"><i class="fa fa-trash-o"></i></a>
 												</td>
-												
 											</tr>
 											@endforeach
 										</tbody>
